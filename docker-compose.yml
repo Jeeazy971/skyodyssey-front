@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  angular-app:
+    build:
+      context: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./src:/app/src
+    environment:
+      - CHOKIDAR_USEPOLLING=true
